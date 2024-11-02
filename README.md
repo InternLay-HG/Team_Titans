@@ -63,6 +63,9 @@ This project is used by :
 - **Chat :** Use the chat portal to communicate directly with food bank.
 - **Request Delivery :** Arrange a pickup or track delivery directly through the platform.
 
+## Quick Links
+- **Figma File**
+#https://www.figma.com/design/ws1Ho44EjeQVmgkYaftr4L/Internlay-MealConnect?node-id=0-1&t=NVrqcgy5CXWKaiWH-1
 ## Future Scope
 
 - Real time insights for food banks and restaurents to track food supply,demand and wastage data and how to optimize it.
