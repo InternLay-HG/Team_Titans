@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+  rel="stylesheet"
+/>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", serif;
+}
+
+body {
+    display: flex;
+    background-color: #f5f5f5;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color:  rgba(83, 176, 155,0.2);;
+}
+.sidebar {
+    width: 16.5%;
+    background-color: #53b09b;
+    color: #fff;
+    padding: 20px;
+    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    position: relative;
+    /* display: none; */
+    transition: all 0.5s ease-in-out;
+    /* position: fixed; */
+}
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-content .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* padding: 0px; */
+    margin-top: -10px;
+    /* position: absolute; */
+    /* background-color: #fff; */
+  }
+  
+  .sidebar-content h3,i {
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  .main-content .upper-header i{
+    display: none;
+    font-size: 1.6em;
+  }
+  .sidebar-content img {
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  /* Sidebar items styling */
+  .items {
+    list-style: none;
+    padding-top: 10px;
+  }
+  
+  .items li {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 1em;
+  }
+  
+  .items li i {
+    color: white;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  
+  .items li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .items li:hover {
+    cursor: pointer;
+    background-color: white;
+    border-left: 4px solid #53b09b;
+    padding-left: 16px;
+    
+  }
+  
+  .items li:hover a,
+  .items li:hover i {
+    /* color: #f3f4f6; */
+    transition: 0.3s ease;
+    color: #53b09b;
+    transform: scale(1.05);
+  }
+  .upgrade {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    /* margin-left: -10px; */
+    width: 90%;
+    margin-top: 100%;
+}
+
+.upgrade p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.upgrade button {
+    background-color: rgba(83, 176, 155,0.8);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.main .main-content {
+    width: 80%;
+    padding: 20px;
+    /* background-color: #6b52ae; */
+    height: 100vh;
+    margin-left: 8px;
+    /* overflow-y: auto; */
+   /* background-color: rgba(83, 176, 155,0.2); */
+    padding-left:3.5vw ;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main .main-content::-webkit-scrollbar{
+  display: none;
+}
+
+.main-content .chat{
+        width: 73%;
+        height: 600px;
+        overflow-y: auto;
+        /* background-color: #53b09b; */
+        border-radius: 25px;
+        padding: 20px;
+      }
+      .main-content .chat::-webkit-scrollbar{
+        display: none;
+      }
+      .main-content .nav-barr{
+        /* background-color: #333; */
+        height: 70px;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: -40px;
+      }
+
+ 
+/* #chat:hover{
+    background-color: gold;
+    transform: scale(1.15);
+    color: black;
+    transition: all 0.3s ease-in-out;
+}  */
+#form {
+        /* background: rgba(0, 0, 0, 0.15); */
+        padding: 0.25rem;
+        position: fixed;
+        bottom: 30px;
+        left: 30%;
+        right: 0;
+        display: flex;
+        width: 57%;
+        height: 3rem;
+        box-sizing: border-box;
+        backdrop-filter: blur(10px);
+        /* margin-bottom: -10px; */
+        gap: 10px;
+      }
+#input {
+        border: none;
+        padding: 0 1rem;
+        flex-grow: 1;
+        width: 60%;
+        border-radius: 2rem;
+        margin: 0.2rem;
+        height: 50px;
+      }
+      #input:focus {
+        outline: none;
+      }
+      #form > button {
+        background: #333;
+        border: none;
+        padding: 0 1rem;
+        margin: 0.25rem;
+        height: 3rem ;
+        width: 6rem;
+        border-radius: 25px;
+        outline: none;
+        color: #fff;
+      }
+
+      .main-content .chat #messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex; 
+          flex-direction: column; /* Align items vertically */
+          /* background-color: #53b09b; */
+      }
+      .main-content .chat #messages .sender-message{
+        align-self: flex-end; 
+        background-color: #c7969a;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 70%;
+        text-align: right;
+      }
+      .main-content .chat #messages .receiver-message{
+        align-self: flex-start; /* Align this item to the left */
+          background-color: #53b09b;
+          color: white;
+          padding: 10px;
+          border-radius: 10px;
+          max-width: 70%;
+          text-align: left;
+      }
+      .main-content .chat #messages > li {
+        padding: 0.5rem 1rem;
+        max-width: 70%;
+        word-wrap: break-word;
+        border-radius: 10px;
+        margin: 0.3rem;
+      }
+      #delete-chat {
+        background: white;
+        border: none;
+        padding: 0 1rem;
+        margin: 0.25rem;
+        height: 3rem ;
+        width: 6rem;
+        border-radius: 25px;
+        outline: none;
+        color: #fff;
+      }
+      #delete-chat:hover{
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+      }
+      #send:hover{
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+      }
+      .main-content .chat{
+        width: 75%;
+        height: 500px;
+        background-color: rgba(83,176,155,0.2);
+        /* background-color: #c7969a; */
+      }
+    </style>
+   
+    <!-- <script src="https://maps.gomaps.pro/maps/api/js?key=AlzaSyMcxxkPDXGvkROsyXCWJuemiSWh_zXwfmq"></script>  -->
+
+</head>
+<body>
+    <div class="main">
+        <nav class="sidebar" id="sidebar">
+            <section class="sidebar-content">
+                <div class="logo">
+                  <img src="/images/LOGO-removebg-preview.png" alt="M" />
+                    <h3>mealConnect</h3>
+                </div>
+                <ul class="items">
+                  <li><i class="ri-store-fill"></i><a href="/listings/shelter">Home</a></li>
+                  <li><i class="ri-dashboard-line"></i><a href="/listings/board">Dashboard</a></li>
+                  <li><i class="ri-compass-discover-line"></i><a href="/listings/navigations">Route Finder</a></li>
+                  <li><i class="ri-message-3-line"></i><a href="/listings/chat">Messages</a></li>
+                  <li><i class="ri-settings-line"></i><a href="/listings/details">Settings</a></li>
+                </ul>
+              </section>
+              <div class="upgrade">
+                <p>Upgrade to unlock premium features</p>
+                <button>Upgrade</button>
+            </div> 
+        </nav>
+        <div class="main-content">
+            <div class="nav-barr">
+              <h1>mealTalk</h1>
+            </div>
+            <div class="chat">
+              <ul id="messages">
+                <li class="sender-message">
+                  Hello Sir !! I am ready to pickup your meal
+                  
+                </li>
+                <li class="sender-message">
+                  Do you want to confirm the Pickup??
+                  
+                </li>
+                <li class="receiver-message">
+                  Yeah sure !!
+                </li>
+                <li class="receiver-message">
+                  Can you pickup the item between 10 to 12 noon ?? 
+                </li>
+                <li class="sender-message">
+                  Yeah sure sir we can.
+
+                </li>
+                <li class="sender-message">
+                  Sir , your pickup delivery has been placed between 10 to 12 noon
+                  
+                </li>
+                <li class="receiver-message">
+                  Okay
+
+                </li>
+              </ul>
+            </div>
+           
+            <form id="form" action="">
+                <input id="input" autocomplete="off" /><button id="send" style="border: 1px solid #53b09b; background-color: white;"><i class="ri-send-plane-fill" style="color: #53b09b; font-size: 1.8rem;"></i></button>
+                <button id="delete-chat" style="background-color: white; border: 1px gray solid;"><i class="ri-delete-bin-6-fill" style="color: grey;font-size: 1.5rem;"></i></button>
+
+            </form>
+
+        </div> 
+         
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      let counter = 0;
+  
+      const socket = io({
+        auth: {
+          serverOffset: 0
+        },
+        ackTimeout: 10000,
+        retries: 3,
+      });
+  
+      const form = document.getElementById('form');
+      const input = document.getElementById('input');
+      const messages = document.getElementById('messages');
+  
+      // Handle form submission
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (input.value) {
+          const clientOffset = `${socket.id}-${counter++}`;
+          socket.emit('chat message', input.value, clientOffset); // Send message and offset
+          input.value = '';
+        }
+      });
+  
+      // Listen for chat messages
+      socket.on('chat message', (msg, serverOffset, senderId) => {
+        const item = document.createElement('li');
+        item.textContent = msg;
+  
+        // Add class based on sender/receiver
+        if (socket.id === senderId) {
+          item.classList.add('sender-message'); // Message sent by this client
+        } else {
+          item.classList.add('receiver-message'); // Message received from another client
+        }
+  
+        messages.appendChild(item);
+        item.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        window.scrollTo(0, document.body.scrollHeight);
+        socket.auth.serverOffset = serverOffset; // Update server offset
+      });
+
+      // deletechat
+      let deleteChatButton = document.getElementById('delete-chat');
+      deleteChatButton.addEventListener('click', () => {
+      if (confirm('Are you sure you want to delete all chats?')) {
+        socket.emit('delete chat'); 
+      }
+    });
+
+    // Listen for chat deleted event
+    socket.on('chat deleted', () => {
+      messages.innerHTML = ''; // Clear all messages from the UI
+    });
+
+
+    </script>
+</body>
+</html>
