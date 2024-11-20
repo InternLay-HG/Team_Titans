@@ -56,12 +56,7 @@ This project is used by :
 - **Recieve orders :** Your details will be availabe to the restaurant owners and once they place an order you will be notified.Then you have to reviece food from their place and send to the needy.
 - **Chat :** Use the chat portal to communicate directly with restaurant owner as well as end customer .
 
-### As an end customer 
 
-- **Create an Account :** Sign up to access the list of participating food bank.
-- **Browse Listings :** View nearby food banks offering food donations.
-- **Chat :** Use the chat portal to communicate directly with food bank.
-- **Request Delivery :** Arrange a pickup or track delivery directly through the platform.
 
 ## Quick Links
 - **Figma File**
