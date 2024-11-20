@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "998752940427",
+    "project_id": "jaimatadi-52545",
+    "storage_bucket": "jaimatadi-52545.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998752940427:android:56b63f7b50fbbdda24ff8e",
+        "android_client_info": {
+          "package_name": "com.example.jmd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVXI3XM5N4TRPU7RSWfbAyL4zMUusd8oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
