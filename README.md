@@ -11,6 +11,8 @@ Thus, food banks will act as a mediator between restaurants and the end costumer
 
 TO CLICK A BUTTON PLEASE CLICK ON THE TEXT AT THE CENTER.
 
+RENDER  WILL TAKE SOME TIME WHILE LOADING THE PAGES SO HAVE PATIENT AND IN THE LANDING PAGE THERE IS A VIDEO ,LET IT LOAD.
+
 ## Features
 
 - **Restaurant Listings :** Browse restaurants offering surplus food for donation.
