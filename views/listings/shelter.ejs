@@ -321,18 +321,19 @@ header .lower-header img{
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  /* background-color: #a62424; */
   /* justify-content: space-evenly; */
   /* justify-content: space-between; */
 }
 
 .post {
   background-color: #fff;
-  width: 300px;
+  width: 280px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   padding-bottom: 20px;
   /* margin-right: 30px;
   margin-left:5px ; */
@@ -451,7 +452,7 @@ header .lower-header img{
 }
 
     </style>
-    <script src="https://maps.gomaps.pro/maps/api/js?key=AlzaSy2JTIt8sQkX1vKUje4xgXiSaaZBAHynETg" async defer></script>
+    <script src="https://maps.gomaps.pro/maps/api/js?key=AlzaSynNxAZ5DExjNozHh8CuPvkAlQm7Brvws3s" async defer></script>
 </head>
 <body>
     <div class="main">
@@ -509,7 +510,8 @@ header .lower-header img{
                           <h4 style="color:black;"><%= listing.name %></h4>
                           <p style="color:rgb(36, 33, 33);">Food Item: <%= listing.item %></p>
                           <p style="color:rgb(36, 33, 33);">Quantity: <%= listing.quantity %> Plates</p>
-                          <button>Accept Donation</button>
+                          <button><a href="/listings/chat" style="text-decoration: none;color:white;">Pickup</a></button>
+                          <!-- <a href="/listings/chat" style="text-decoration: none;color:white;"><button>Pickup</button></a> -->
                       </div>
                       </div>
                     </a>
@@ -551,7 +553,7 @@ header .lower-header img{
       const address = "99PR+HJX, Khelgaon, Ranchi, Jharkhand 834009";
         
         // Step 2: Replace 'YOUR_API_KEY' with your Gomaps geocoding API key
-        const apiKey = 'AlzaSy2JTIt8sQkX1vKUje4xgXiSaaZBAHynETg';
+        const apiKey = 'AlzaSynNxAZ5DExjNozHh8CuPvkAlQm7Brvws3s';
         
         // Function to fetch latitude and longitude for the given address
         async function getCoordinates(address) {

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
-const {listingSchema,reviewSchema} = require("../schema.js");
+// const {listingSchema,reviewSchema} = require("../schema.js");
 const ExpressError = require("../utils/expressError.js");
 const Listing = require("../models/Listing");
 const passport = require("passport");
