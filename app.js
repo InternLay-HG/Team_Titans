@@ -99,7 +99,7 @@ app.use('/customer', require('./routes/customer'))
 
 
 app.get("/",(req,res)=>{
-  res.render("listings/home.ejs");
+  res.render("listings/index.ejs");
 });
 
 app.all("*",(req,res,next)=>{
